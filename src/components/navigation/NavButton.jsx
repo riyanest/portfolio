@@ -59,8 +59,7 @@ const NavButton = ({
       {({ size }) => {
         return size && size >= 480 ? (
           <div
-            className="absolute cursor-pointer z-50"
-            style={{ transform: `translate(${x}, ${y})` }}
+            style={{ margin: 15 }}
           >
             <NavLink
               variants={item}
@@ -74,7 +73,7 @@ const NavButton = ({
               prefetch={false}
               scroll={false}
             >
-              <span className="relative  w-14 h-14 p-4 animate-spin-slow-reverse group-hover:pause hover:text-accent">
+              <span className="relative  w-14 h-14 p-4  group-hover:pause hover:text-accent">
                 {getIcon(icon)}
 
                 <span className="peer bg-transparent absolute top-0 left-0 w-full h-full" />
@@ -87,7 +86,7 @@ const NavButton = ({
           </div>
         ) : (
           <div className="w-fit cursor-pointer z-50">
-            <NavLink
+            {/* <NavLink
               variants={item}
               href={link}
               target={newTab ? "_blank" : "_self"}
@@ -113,7 +112,7 @@ const NavButton = ({
                   {label}
                 </span>
               </span>
-            </NavLink>
+            </NavLink> */}
           </div>
         );
       }}
