@@ -21,21 +21,51 @@ const HatModel = React.memo(function HatModel(props) {
       {...props}
       dispose={null}
       ref={modelRef}
-      scale={[1.8, 1.8, 1.8]}
-      rotation={[0.4, -1, 0]}
       position={[0, 0, 0]}
+      scale={[0.27, 0.27, 0.27]}
+      rotation={[-0.25, 0, 0]}
     >
+      {/* Update the mesh references based on your node structure */}
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes.Object_2.geometry}
-        material={materials.initialShadingGroup}
-        position={[0, -3.867, 0]}
-        rotation={[-Math.PI / 2, 0, 0]}
+        geometry={nodes.Object_2.geometry} // Update to the correct geometry
+        material={nodes.Object_2.material} // Update to the correct material
+        position={[-1.057, 0, 0]}
+        rotation={[0, 0.224, 0]}
+        scale={0.832}
       />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Object_3.geometry} // Update to the correct geometry
+        material={nodes.Object_3.material} // Update to the correct material
+        position={[-1.057, 0, 0]}
+        rotation={[0, 0.224, 0]}
+        scale={0.832}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Object_4.geometry} // Update to the correct geometry
+        material={nodes.Object_4.material} // Update to the correct material
+        position={[-1.057, 0, 0]}
+        rotation={[0, 0.224, 0]}
+        scale={0.832}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Object_5.geometry} // Update to the correct geometry
+        material={nodes.Object_5.material} // Update to the correct material
+        position={[-1.057, 0, 0]}
+        rotation={[0, 0.224, 0]}
+        scale={0.832}
+      />
+      {/* Add more meshes as needed based on your node structure */}
     </group>
   );
 });
 
 export default HatModel;
-useGLTF.preload("/models/hat-transformed.glb");
+useGLTF.preload("/models/swiss_army_knife.glb");
